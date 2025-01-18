@@ -1,24 +1,18 @@
+import { SafeAreaView, ScrollView } from 'react-native'
 import React from 'react'
-
-import{
-  View,
-  Text,
-  SafeAreaView
-} from 'react-native'
-
-
-function App(){
- 
-    return (
-      <SafeAreaView>
-        <View>
-          <Text>Hello World!</Text>
-        </View>
-      </SafeAreaView>
-    );
-
-
-
+import FlatCards from './components/FlatCards';
+import ElevateCards from './components/ElevateCards';
+const App = () => {
+  return (
+    <SafeAreaView>
+      <ScrollView>
+       
+        <FlatCards />
+        <ElevateCards />
+      
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 export default App
