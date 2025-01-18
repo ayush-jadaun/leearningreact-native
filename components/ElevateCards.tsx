@@ -85,6 +85,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cardText: {
-    color: '#1A1A1A', // Text color on cards for better contrast
+    color: '#1A1A1A',
   },
 });
