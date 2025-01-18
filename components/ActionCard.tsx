@@ -16,9 +16,11 @@ export default function ActionCard() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headingText}>ActionCard</Text>
+      <View style={styles.headingContainer}>
+        <Text style={styles.headingText}>ActionCard</Text>
+      </View>
       <View style={[styles.card, styles.elevatedCard]}>
-        <View style={styles.headingContainer}>
+        <View style={styles.cardHeader}>
           <Text style={styles.headerText}>What's new in JavaScript?</Text>
         </View>
         <View style={styles.bodyContainer}>
@@ -48,18 +50,23 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     backgroundColor: '#1A1A1A',
+    alignItems: 'center', // Center the entire content
+  },
+  headingContainer: {
+    alignItems: 'center',
+    marginBottom: 10,
   },
   headingText: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#FFFFFF', // This is fine as it contrasts well with the dark background
-    marginBottom: 10,
+    color: '#FFFFFF',
   },
   card: {
     backgroundColor: '#FFF',
     borderRadius: 8,
     padding: 15,
     marginVertical: 10,
+    width: '100%', // Make the card take up 90% of the width
   },
   elevatedCard: {
     elevation: 4,
@@ -68,13 +75,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 2,
   },
-  headingContainer: {
+  cardHeader: {
     marginBottom: 10,
   },
   headerText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333', // Changed to a darker color to contrast better with the white card background
+    color: '#333',
   },
   bodyContainer: {
     marginVertical: 10,
@@ -90,7 +97,7 @@ const styles = StyleSheet.create({
   },
   readMoreText: {
     marginTop: 10,
-    color: '#1E90FF', 
+    color: '#1E90FF',
     fontWeight: 'bold',
   },
 });
